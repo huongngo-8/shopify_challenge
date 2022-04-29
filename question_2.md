@@ -20,7 +20,7 @@ ANSWER: Peacock
 
 # Part 3
 
-SELECT P.ProductName AS ProductName, COUNT(P.ProductID) AS ProductID
+SELECT P.ProductName AS ProductName, COUNT(P.ProductID) AS NumOfOrders
 FROM Products AS P, OrderDetails AS OD, Orders AS O, Customers AS C
 WHERE P.ProductID = OD.ProductID AND
 	  OD.OrderID = O.OrderID AND
