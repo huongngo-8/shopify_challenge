@@ -5,6 +5,8 @@ FROM Orders AS O, Shippers AS S
 WHERE O.ShipperID = S.ShipperID
 AND S.ShipperName = "Speedy Express"
 
+ANSWER: 54 orders
+
 # Part 2
 
 SELECT E.LastName AS LastName, O.EmployeeID AS EmployeeID, COUNT(O.OrderID) AS NumOfOrders
@@ -13,6 +15,8 @@ WHERE O.EmployeeID = E.EmployeeID
 GROUP BY O.EmployeeID
 ORDER BY COUNT(O.OrderID) DESC
 LIMIT 1
+
+ANSWER: 40 orders
 
 # Part 3
 
@@ -25,3 +29,5 @@ WHERE P.ProductID = OD.ProductID AND
 GROUP BY P.ProductID
 ORDER BY COUNT(P.ProductID) DESC
 LIMIT 1
+
+ANSWER: Gorgonzola Telino
