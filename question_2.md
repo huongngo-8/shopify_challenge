@@ -1,11 +1,11 @@
-# Question 1
+# Part 1
 
 SELECT COUNT(O.OrderID), S.ShipperName
 FROM Orders AS O, Shippers AS S
 WHERE O.ShipperID = S.ShipperID
 AND S.ShipperName = "Speedy Express"
 
-# Question 2
+# Part 2
 
 SELECT E.LastName, O.EmployeeID, COUNT(O.OrderID)
 FROM Orders as O, Employees AS E
@@ -14,7 +14,7 @@ GROUP BY O.EmployeeID
 ORDER BY COUNT(O.OrderID) DESC
 LIMIT 1
 
-# Question 3
+# Part 3
 
 SELECT P.ProductName, COUNT(P.ProductID)
 FROM Products AS P, OrderDetails AS OD, Orders AS O, Customers AS C
